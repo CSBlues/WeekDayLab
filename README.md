@@ -1,14 +1,22 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# DayOfWeek Lab
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+Write a program that outputs the day of 
+the week for a given date! You program has just the main method and 
+the `dayOfWeek` method below.  
+Given the month, m, day, d and year y, the day (D) of the week(Sunday = 
+0, Monday = 1, …, Saturday = 6) D is given by:
 
-### Setup command
-N/A
+y_0 = y - (14 - m)/12
 
-### Run command
-`gradle test`
+x_0 = y_0 + y_0/4 - y_0/100 + y_0/400
 
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+m_0 = m + 12 * ((14-m)/12)-2
+
+D = (d + x_0 + 31 * m_0/12) % 7
+
+```
+public static String dayOfWeek(int m, int d, int y){
+	// fill in code
+}
+```
+
