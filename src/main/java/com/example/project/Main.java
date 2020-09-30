@@ -1,7 +1,10 @@
 package com.example.project;
 
 public class Main {
-    public static void main(final String[] args) {
-        System.out.println("Not the right string, tests will fail!");
+    public static void main(String [] args){
+
+    }
+    public static String dayOfWeek(int m, int d, int y){
+
     }
 }
